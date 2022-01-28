@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>ECMAScript - Declaração de variáveis</title>
+        
+        <script src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+        <script type="text/babel">
+            //VAR
+            console.log('Teste de Var início:')
+
+            //Sobreposição do valor da variável global com base da variável do bloco
+           var serie = 'Serie1'
+           {
+               var serie = 'Serie2' 
+               console.log("Dentro do bloco: " + serie)
+           }
+           console.log("Fora do bloco: " + serie)
+
+           //LET
+           console.log('Teste de Let início:')
+           let filme = 'Filme1'
+           {
+               let filme = 'Filme2' 
+               console.log("Dentro do bloco: " + filme)
+           }
+           console.log("Fora do bloco: " + filme)
+        </script>
+    </head>
+
+    <body>
+        <div id='output'></div>
+    </body>
+</html>

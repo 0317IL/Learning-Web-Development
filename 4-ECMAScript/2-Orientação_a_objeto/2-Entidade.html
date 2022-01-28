@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+    <script type='text/babel'>
+       //Entidade: cadeira
+       class Cadeira{
+           constructor(qtd, gira, cor){
+               this.qtd_de_pernas = qtd
+               this.giratoria = gira
+               this.cor = cor
+           }
+
+           testeGirar(){
+               if(this.giratoria === true){
+                   return 'Girou'
+               }else{
+                   return 'A cadeira não é giratória'
+               }
+           }
+       }
+
+       let cadeira = new Cadeira(4, true, 'vermelho')
+
+       console.log(cadeira.testeGirar())
+       document.write(`A cadeira possui ${cadeira.qtd_de_pernas} e é ${cadeira.cor}`)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

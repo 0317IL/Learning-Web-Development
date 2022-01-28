@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Estrutura de repetição - While</title>
+	<script type="text/javascript">
+		var x = 0
+
+		document.write('Inicio <br />')
+
+		while( x <= 10){
+			document.write(x + '<br />')
+
+			//Serve para interromper o laço de repetição
+			if(x === 5){
+				break
+			}
+
+			//Serve para descartar as próximas intruções e rodar o laço novamente
+			if(x === 2){
+				//Se não for feito o incremento o 'x' ficará valendo 2 
+				//gerando um loop infinito
+				x++
+				continue
+			}
+
+			x++
+		}
+
+		document.write('Fim <br />')
+	</script>
+</head>
+<body>
+
+</body>
+</html>

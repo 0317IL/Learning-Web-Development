@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tratamento de Erros</title>
+	<script type="text/javascript">
+		var video = []
+
+		video[1] = []
+		video[1]['Título'] = 'Naruto'
+		video[1]['Categoria'] = 'Anime'
+
+		/*Se qualquer declaração do bloco try (ou em uma função chamada dentro do bloco try) 
+		lança uma exceção, o controle é imediatamente mudado para o bloco catch. Se nenhuma 
+		exceção é lançada no bloco try, o bloco catch é ignorado. O bloco finally executa após 
+		os blocos try e catch executarem, mas antes das declarações seguinte ao bloco try...catch.*/
+
+		function getVideo(video){
+			try{
+				console.log(video[0]['Título'])
+			}catch(e){
+				console.log('Deu erro!')
+				tratarErro(e)
+
+				/*Use a declaração throw para lançar uma exceção. 
+				Quando você lança uma exceção, você especifica a 
+				expressão contendo o valor a ser lançado. */
+				
+				throw new Error('Execução parada')
+			}finally{
+				console.log('Sempre passa')
+			}
+
+			console.log('Aplicação não morreu')
+		}
+
+		function tratarErro(e){
+			console.log('Erro: ' + e)
+		}
+
+		getVideo(video)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

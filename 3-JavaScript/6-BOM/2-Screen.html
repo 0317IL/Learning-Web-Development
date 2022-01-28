@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BOM - Screen</title>
+
+		<script type="text/javascript">
+			//Essas propriedades repassam os valores maximos da tela
+			var altura = window.screen.availHeight
+			var largura = window.screen.availWidth
+
+			document.write('Altura máxima: ' + altura + '<br />')
+			document.write('largura máxima: ' + largura + '<br />')
+
+			if(largura < 500)
+				document.write('Tela Mobile')
+			else
+				document.write('Tela Web')
+		</script> 
+	</head>
+
+	<body>
+		
+	</body>
+</html>

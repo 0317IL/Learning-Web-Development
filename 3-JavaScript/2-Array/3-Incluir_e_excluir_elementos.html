@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array - Incluir e excluir</title>
+	<script type="text/javascript">
+		var frutas = ['Banana', 'Maçã']
+		console.log(frutas)
+
+		//Incluir no inicio
+		frutas.unshift('Morango')
+		//Incluir no final do array
+		frutas.push('Uva')
+		console.log(frutas)
+
+		//Excluir no inicio
+		frutas.shift()
+		//Excluir no final
+		//frutas.pop()
+		console.log(frutas)
+
+		//Multidimensionais
+		//Segue a mesma lógica do array normal
+		var lista = []
+		lista['frutas'] = ['Banana', 'Maçã', 'Uva'] 
+		lista['pessoas'] = ['João', 'Luis', 'Carlos', 'Mario']
+
+		//Inserir no inicio
+		lista['frutas'].push('Morango')
+		console.log(lista)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BOM - Timing</title>
+
+		<script type="text/javascript">
+			/* setTimeout - executar a ação uma única vez após o tempo
+				setInterval - executa a ação após o intervalo continuamente*/
+
+				setTimeout(function () {
+					document.write('Teste <br />')
+
+					//Para a execução
+					/*if(i === 3)
+						clearTimeout(x)*/
+				}, 500)
+
+				var i = 10
+				var x = setInterval(function() {
+					if( i < 0 )
+						window.location.reload()
+
+					document.write('Teste - ' + i + '<br />')
+
+					//Para a execução
+					/*if(i === 3)
+						clearInterval(x)*/
+					i--
+				}, 200)
+		</script> 
+	</head>
+
+	<body>
+		
+	</body>
+</html>
