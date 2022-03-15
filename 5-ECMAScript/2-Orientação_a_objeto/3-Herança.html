@@ -1,0 +1,67 @@
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 - Herança</title>
+
+  <script src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+  <script type="text/babel">
+    class Animal {
+      constructor() {
+        this.cor = '';
+        this.tamanho = null
+      }
+
+      dormir() {
+        console.log('Dormindo');
+      }
+    }
+
+
+    class Dog extends Animal{
+      constructor() {
+        super();
+        this.orelha = 'grandes e caídas';
+      }
+
+      correr() {
+        console.log('Correr');
+      }
+
+      rosnar() {
+        console.log('Rosnar');
+      }
+    }
+
+    class Bird extends Animal{
+      constructor() {
+        super();
+      this.bico = 'curto';
+      }
+
+      voar() {
+        console.log('Voando...');
+      }
+    }
+
+    class Papagaio extends Bird {
+      constructor(){
+        super();
+        this.sabeFalar = true;
+      }
+
+      falar() {
+        console.log('Falando...');
+      }
+    }
+
+    let doguinho = new Dog();
+    let passaro = new Bird();
+  </script>
+</head>
+<body>
+  <div id='output'></div>
+</body>
+</html>
